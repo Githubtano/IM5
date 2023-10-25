@@ -11,14 +11,19 @@
     <div class="container">
         <h1>Clownfish Recognition Prototype</h1>
         <p>Upload an image of a clownfish for recognition:</p>
+
         <form id="upload-form" action="upload.php" method="post" enctype="multipart/form-data">
             <input type="file" name="image" id="image-upload" accept=".jpg, .jpeg, .png">
             <button type="submit">Upload</button>
         </form>
+        
         <div id="result" class="hidden">
             <h2>Recognition Result:</h2>
             <p id="species">Species: Amphiprion ocellaris</p>
         </div>
     </div>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>

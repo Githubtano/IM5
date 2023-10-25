@@ -9,10 +9,8 @@ $dbPass = "cae266cha";      // Database password
 // Attempt to connect to the database
 try {
     $db = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
-
-    
-    // Set the PDO error mode to exception
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
 } catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());
 }

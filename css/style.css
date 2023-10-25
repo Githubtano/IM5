@@ -23,9 +23,9 @@ form {
     margin: 20px 0;
 }
 
-input[type="file"] {
+/* input[type="file"] {
     display: none;
-}
+} */
 
 button {
     background-color: #3498db;
