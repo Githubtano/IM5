@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clownfish Recognition Prototype</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
-    <h1>Drehbuch Autor</h1>
-    <p>Schreibe kurz eine Szene in das Textfeld und der author........</p>
-
-
-    <form id="inputform">
-        <textarea name="text"></textarea>
-        <input type="submit" value="absender">
-
-
-    </form>
-
-    <script src="uebung_js/script.js"></script>
+    <div class="container">
+        <h1>Clownfish Recognition Prototype</h1>
+        <p>Upload an image of a clownfish for recognition:</p>
+        <form id="upload-form" action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" id="image-upload" accept=".jpg, .jpeg, .png">
+            <button type="submit">Upload</button>
+        </form>
+        <div id="result" class="hidden">
+            <h2>Recognition Result:</h2>
+            <p id="species">Species: Amphiprion ocellaris</p>
+        </div>
+    </div>
 </body>
 </html>
