@@ -9,23 +9,47 @@
     <link rel="icon" type="image/x-icon" href="/images/favccon.jpg">
 </head>
 
+
 <body>
     <div class="container">
-        <h1>Clownfish Recognition Prototype</h1>
-        <p>Upload an image of a clownfish for recognition:</p>
+        <h1>Clownfish <span class="orange">Recognition</span></h1>
+
+        <p class="text">Upload an image of a clownfish for recognition:</p>
 
         <form id="upload-form" action="upload.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="image" id="image-upload" accept=".jpg, .jpeg, .png">
+            <input type="file" name="image" id="image-upload" accept=".jpg, .jpeg, .png" onchange="previewFile()">
+        
+            <div id="file-preview" class="hidden">
+                <img id="preview-image" src="#" alt="Image Preview">
+            </div>
+            
             <button type="submit">Upload</button>
         </form>
-        
+
         <div id="result" class="hidden">
             <h2>Recognition Result:</h2>
             <p id="species">Species: Amphiprion ocellaris</p>
         </div>
     </div>
 
+    <div class="wrapper">
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+      </div>
+      
     <script src="js/script.js"></script>
-
 </body>
 </html>

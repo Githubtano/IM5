@@ -13,7 +13,7 @@ uploadForm.addEventListener("submit", function (e) {
     formData.append("image", imageInput.files[0]);
 
     // Send the image to the server using fetch
-    fetch("upload.php", {
+    fetch("php/upload.php", {
         method: "POST",
         body: formData,
     })
@@ -24,3 +24,19 @@ uploadForm.addEventListener("submit", function (e) {
         resultSection.classList.remove("hidden");
     });
 });
+
+// Function to display a file preview
+function previewFile() {
+    var previewImage = document.getElementById("preview-image");
+    var fileInput = document.getElementById("image-upload");
+    var filePreview = document.getElementById("file-preview");
+
+    if (fileInput.files && fileInput.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            previewImage.src = e.target.result;
+        };
+        reader.readAsDataURL(fileInput.files[0]);
+        filePreview.style.display = "block";
+    }
+}
