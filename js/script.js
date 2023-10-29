@@ -40,24 +40,23 @@ uploadForm.addEventListener("submit", async function (e) {
     // Classify the image
     const prediction = await model.predict(image);
     
+    console.log('Prediction:', prediction);  // Debug log
+    
     // Sort predictions by probability
     prediction.sort((a, b) => b.probability - a.probability);
 
     // Get the species name of the highest probability prediction
-    const speciesName = prediction[0].className;
+    const speciesName = prediction[0].className.replace(/_/g, ' ');
     
+    console.log('Species Name:', speciesName);  // Debug log
+
     // Get the species ID from the species name
     const speciesID = getSpeciesID(speciesName);
     
-    // Log the species ID and species name for troubleshooting
-    console.log('Species Name:', speciesName);
-    console.log('Species ID:', speciesID);
-    
+    console.log('Species ID:', speciesID);  // Debug log
+
     // Construct the URL for the species information page
     const infoPageURL = `https://im.chappuiscaetano.ch/php/species.php?id=${speciesID}`;
-    
-    // Log the info page URL for troubleshooting
-    console.log('Info Page URL:', infoPageURL);
     
     // Redirect the user to the species information page
     window.location.href = infoPageURL;

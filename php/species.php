@@ -43,7 +43,7 @@ try {
     <div class="container">
         <h1><?php echo htmlspecialchars($species_name); ?></h1>
         <p><?php echo htmlspecialchars($description); ?></p>
-        <!-- If you have an image URL in your database, you can display it like this: -->
+    
         <!-- Remove the below line if your database doesn't have an image_url column -->
         <img src="<?php echo htmlspecialchars($image_url); ?>" alt="<?php echo htmlspecialchars($species_name); ?>">
     </div>

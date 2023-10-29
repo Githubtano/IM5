@@ -1,5 +1,6 @@
 <?php
 // Set the path to store uploaded images
+
 $uploadDir = "uploads/";
 
 // Create the uploads directory if it doesn't exist
