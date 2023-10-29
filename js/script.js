@@ -1,3 +1,17 @@
+// Import the tmImage library
+import * as tmImage from '@teachablemachine/image';
+
+// Your model URL
+const modelURL = 'https://teachablemachine.withgoogle.com/models/ORHSpBtYq/';  
+
+// Load the model
+let model;
+async function loadModel() {
+    model = await tmImage.load(modelURL + 'model.json', modelURL + 'metadata.json');
+    console.log('Model loaded');
+}
+loadModel();
+
 // DOM elements
 const uploadForm = document.getElementById("upload-form");
 const imageInput = document.getElementById("image-upload");
@@ -5,24 +19,21 @@ const resultSection = document.getElementById("result");
 const speciesElement = document.getElementById("species");
 
 // Event listener for form submission
-uploadForm.addEventListener("submit", function (e) {
+uploadForm.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    // Create a FormData object to send the image
-    const formData = new FormData();
-    formData.append("image", imageInput.files[0]);
+    const image = document.getElementById('preview-image');
+    if (!model) {
+        console.error('Model not loaded');
+        return;
+    }
 
-    // Send the image to the server using fetch
-    fetch("php/upload.php", {
-        method: "POST",
-        body: formData,
-    })
-    .then((response) => response.json())
-    .then((data) => {
-        // Update the result section with the recognition result
-        speciesElement.textContent = `Species: ${data.species}`;
-        resultSection.classList.remove("hidden");
-    });
+    // Classify the image
+    const prediction = await model.predict(image);
+    const speciesName = prediction[0].className;
+    
+    speciesElement.textContent = `Species: ${speciesName}`;
+    resultSection.classList.remove("hidden");
 });
 
 // Function to display a file preview
