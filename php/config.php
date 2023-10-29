@@ -1,5 +1,4 @@
 <?php
-/*
 // Database configuration
 $dbHost = "localhost:3306";  // Hostname and port
 $dbName = "IM5";            // Database name
@@ -16,4 +15,3 @@ try {
     die("Connection failed: " . $e->getMessage());
 }
 
-*/
