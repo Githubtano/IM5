@@ -1,6 +1,3 @@
-// Import the tmImage library
-import * as tmImage from '@teachablemachine/image';
-
 // Your model URL
 const modelURL = 'https://teachablemachine.withgoogle.com/models/ORHSpBtYq/';  
 
@@ -30,6 +27,11 @@ uploadForm.addEventListener("submit", async function (e) {
 
     // Classify the image
     const prediction = await model.predict(image);
+    
+    // Sort predictions by probability
+    prediction.sort((a, b) => b.probability - a.probability);
+
+    // Get the species name of the highest probability prediction
     const speciesName = prediction[0].className;
     
     speciesElement.textContent = `Species: ${speciesName}`;

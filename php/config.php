@@ -1,4 +1,5 @@
 <?php
+/*
 // Database configuration
 $dbHost = "localhost:3306";  // Hostname and port
 $dbName = "IM5";            // Database name
@@ -14,3 +15,5 @@ try {
 } catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());
 }
+
+*/

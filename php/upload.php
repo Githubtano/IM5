@@ -1,4 +1,6 @@
 <?php
+
+/*
 // Set the path to store uploaded images
 $uploadDir = "uploads/";
 
@@ -24,3 +26,4 @@ if ($_FILES["image"]["error"] == UPLOAD_ERR_OK) {
 } else {
     echo "Upload failed.";
 }
+*/
