@@ -1,8 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Schibsted+Grotesk&display=swap');
 
 body {
-
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,21 +29,42 @@ h1 {
     color: #000000;
     letter-spacing: 1.5px;
 }
+
 .orange {
     color: #e17000; 
 }
 
 .text {
     font-family: 'Schibsted Grotesk', sans-serif;
-    font-size: larger;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-h2  {font-family: 'Schibsted Grotesk', sans-serif;
+h2  {
+    font-family: 'Schibsted Grotesk', sans-serif;
     font-size: 20px;
 }
 
 form {
-    margin: 20px 0;
+    margin: 20px 0 40px;
+}
+
+/* Button */
+.custom-file-upload {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 30px; 
+    cursor: pointer;
+    font-family: 'Schibsted Grotesk', sans-serif; 
+    font-size: medium;
+    border-radius: 10px;
+    border: none;
+    display: inline-block;
+    transition: background-color 0.1s ease-in-out;
+    margin-right: 10px;}
+
+.custom-file-upload:hover {
+    background-color: #e17000;
 }
 
 button {
@@ -54,13 +76,26 @@ button {
     font-family: 'Schibsted Grotesk', sans-serif; 
     font-size: medium;
     border-radius: 10px; 
+    transition: background-color 0.1s ease-in-out;
 }
 
 button:hover {
-    background-color: #e17000; }
+    background-color: #e17000; 
+}
+
+input[type=file] {
+    border: 2px solid #3498db;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type=file]:hover {
+    border-color: #e17000;
+}
 
 #result {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .hidden {
@@ -73,7 +108,17 @@ button:hover {
 }
 
 #preview-image {
-    max-width: auto;
-    max-height: 500px; /* Define the maximum height for the preview image */
+    width: 500px;
+    height: 500px;
+    object-fit: contain; 
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+    .container {
+        width: 95%;
+    }
+}

@@ -19,23 +19,24 @@
         <p class="text">Upload an image of a clownfish for recognition:</p>
 
         <form id="upload-form" method="post" enctype="multipart/form-data">
-            <label for="image-upload">Choose an image:</label>  
-            <input type="file" name="image" id="image-upload" accept=".jpg, .jpeg, .png" onchange="previewFile()">
-        
             <div id="file-preview" class="hidden">
-                <img id="preview-image" src="#" alt="Image Preview"> 
+                <img id="preview-image" src="#" alt="Image Preview">
             </div>
-            
-            <button type="submit">Upload</button>
+            <div class="buttons">
+                <label class="custom-file-upload">
+                    Choose File
+                    <input type="file" name="image" id="image-upload" accept=".jpg, .jpeg, .png" onchange="previewFile()" hidden>
+                </label>
+                <button type="submit">Upload</button>
+            </div>
         </form>
 
         <div id="result" class="hidden">
             <h2>Recognition Result:</h2>
             <p id="species">Species: Amphiprion ocellaris</p>
-        </div>
+        </div> 
     </div>
-    
-    <!-- Load script -->
+    <!-- Load your script -->
     <script src="js/script.js"></script>
 </body>
 </html>

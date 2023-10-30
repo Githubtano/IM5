@@ -55,6 +55,12 @@ button {
     font-size: medium;
     border-radius: 10px; 
 }
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    margin-bottom: 20px; 
+}
 
 button:hover {
     background-color: #e17000; }
