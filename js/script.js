@@ -1,4 +1,4 @@
-// Define the URL 
+// Define the URL of the model
 const modelURL = 'https://teachablemachine.withgoogle.com/models/ORHSpBtYq/';
 
 // Declare a variable to hold the loaded model
@@ -6,8 +6,7 @@ let model;
 
 // function to load the model
 async function loadModel() {
-    
-// Load the model using the Teachable Machine library
+    // Load the model using the Teachable Machine library
     model = await tmImage.load(modelURL + 'model.json', modelURL + 'metadata.json');
     console.log('Model loaded');  
 }
@@ -36,7 +35,7 @@ function getSpeciesID(speciesName) {
 uploadForm.addEventListener("submit", async function (e) {
     e.preventDefault();  
 
-// Get the image element
+    // Get the image element
     const image = document.getElementById('preview-image');  
     if (!model) {
         console.error('Model not loaded'); 
@@ -67,16 +66,21 @@ uploadForm.addEventListener("submit", async function (e) {
 
 // Function to display a file preview when a file is selected
 function previewFile() {
+    console.log('previewFile called');  // Debug log
     var previewImage = document.getElementById("preview-image");
     var fileInput = document.getElementById("image-upload");
-    var filePreview = document.getElementById("file-preview");
+    var introText = document.getElementById("intro-text");
+    var previewHeading = document.getElementById("preview-heading");
+    var filePreview = document.getElementById("file-preview");  // Get a reference to the file-preview div
 
     if (fileInput.files && fileInput.files[0]) {
-        var reader = new FileReader();              // Create a new FileReader object
+        var reader = new FileReader();
         reader.onload = function (e) {
-            previewImage.src = e.target.result;     // Set the src attribute of the image element to the file data
+            previewImage.src = e.target.result;
+            introText.style.display = "none"; 
+            previewHeading.style.display = "block";  
+            filePreview.style.display = "block";  // Set the display property of file-preview to block
         };
-        reader.readAsDataURL(fileInput.files[0]);   // Read the file data as a Data URL
-        filePreview.style.display = "block";        // Display the file preview element
+        reader.readAsDataURL(fileInput.files[0]);
     }
 }

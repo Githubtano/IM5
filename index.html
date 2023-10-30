@@ -10,33 +10,34 @@
     <!-- Load TensorFlow.js and Teachable Machine Library -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
 </head>
 
 <body>
     <div class="container">
-        <h1>Clownfish <span class="orange">Recognition</span></h1>
-
-        <p class="text">Upload an image of a clownfish for recognition:</p>
+        <div id="intro-text">
+            <h1>Clownfish <span class="orange">Recognition</span></h1>
+            <p class="text">Upload an image of a clownfish for recognition</p>
+        </div>
+        <div id="preview-heading" class="hidden">
+            <h2> Image Preview</h2>
+        </div>
 
         <form id="upload-form" method="post" enctype="multipart/form-data">
-            <div id="file-preview" class="hidden">
-                <img id="preview-image" src="#" alt="Image Preview">
-            </div>
-            <div class="buttons">
-                <label class="custom-file-upload">
-                    Choose File
-                    <input type="file" name="image" id="image-upload" accept=".jpg, .jpeg, .png" onchange="previewFile()" hidden>
-                </label>
-                <button type="submit">Upload</button>
-            </div>
+            <label for="image-upload" class="custom-file-upload">
+                Choose File
+            </label>
+            <input type="file" name="image" id="image-upload" accept=".jpg, .jpeg, .png" onchange="previewFile()">
+            <button type="submit">Upload</button>
         </form>
-
+        <div id="file-preview" class="hidden">
+            <img id="preview-image" src="#" alt="Image Preview">
+        </div>
         <div id="result" class="hidden">
             <h2>Recognition Result:</h2>
-            <p id="species">Species: Amphiprion ocellaris</p>
-        </div> 
+            <p id="species"></p>
+        </div>
     </div>
-    <!-- Load your script -->
     <script src="js/script.js"></script>
 </body>
 </html>

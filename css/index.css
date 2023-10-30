@@ -22,6 +22,14 @@ body {
     z-index: 1;
 }
 
+#preview-heading {
+    position: absolute; 
+    left: 0; 
+    width: 100%; 
+    text-align: center; 
+    display: none; 
+}
+
 /* Text Design */
 h1 {
     font-family: 'Abril Fatface', sans-serif; 
@@ -41,12 +49,13 @@ h1 {
 }
 
 h2  {
-    font-family: 'Schibsted Grotesk', sans-serif;
-    font-size: 20px;
+    font-family: 'Abril Fatface', sans-serif; 
+    font-size: 60px;
+    letter-spacing: 1.5px;
 }
 
 form {
-    margin: 20px 0 40px;
+    margin: 50px 0 40px;
 }
 
 /* Button */
@@ -88,6 +97,7 @@ input[type=file] {
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+    display: none;
 }
 
 input[type=file]:hover {
@@ -102,14 +112,23 @@ input[type=file]:hover {
     display: none;
 }
 
+#intro-text {
+    display: block; /* Ensure intro-text is initially visible */
+}
+
+#preview-heading {
+    display: none; /* Ensure preview-heading is initially hidden */
+}
+
 /* Show file preview container */
 #file-preview {
+    margin-top: 20px;
     display: none;
 }
 
 #preview-image {
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 200px;
     object-fit: contain; 
 }
 
