@@ -22,6 +22,10 @@
         <div id="preview-heading" class="hidden">
             <h2> Image Preview</h2>
         </div>
+        
+        <div id="file-preview" class="hidden">
+            <img id="preview-image" src="#" alt="Image Preview">
+        </div>
 
         <form id="upload-form" method="post" enctype="multipart/form-data">
             <label for="image-upload" class="custom-file-upload">
@@ -30,9 +34,7 @@
             <input type="file" name="image" id="image-upload" accept=".jpg, .jpeg, .png" onchange="previewFile()">
             <button type="submit">Upload</button>
         </form>
-        <div id="file-preview" class="hidden">
-            <img id="preview-image" src="#" alt="Image Preview">
-        </div>
+        
         <div id="result" class="hidden">
             <h2>Recognition Result:</h2>
             <p id="species"></p>

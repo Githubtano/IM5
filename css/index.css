@@ -130,6 +130,7 @@ input[type=file]:hover {
     width: 450px;
     height: 200px;
     object-fit: contain; 
+    margin-top: 150px;
 }
 
 /* Responsive Design */
