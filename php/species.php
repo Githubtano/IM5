@@ -16,10 +16,9 @@ try {
     
     if ($stmt->rowCount() > 0) {
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        $species_name = $row['species_name'];
-        $description = $row['description'];
-        // Remove the below line if your database doesn't have an image_url column
-        $image_url = $row['image_url'];  
+        $species_name = htmlspecialchars($row['species_name']);
+        $description = htmlspecialchars($row['description']);
+        $image_url = htmlspecialchars($row['image_url']);  // Remove this line if your database doesn't have an image_url column  
     } else {
         echo "0 results";
         exit;
@@ -28,24 +27,21 @@ try {
     echo "Error: " . $e->getMessage();
     exit;
 }
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($species_name); ?> Information</title>
-    <!-- Add your CSS file link here -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-    <div class="container">
-        <h1><?php echo htmlspecialchars($species_name); ?></h1>
-        <p><?php echo htmlspecialchars($description); ?></p>
-    
-        <!-- Remove the below line if your database doesn't have an image_url column -->
-        <img src="<?php echo htmlspecialchars($image_url); ?>" alt="<?php echo htmlspecialchars($species_name); ?>">
-    </div>
-</body>
-</html>
+// Load the HTML template
+$template = file_get_contents('../template.html');
+
+if ($template === false) {
+    echo "Failed to load template.html";
+    exit;
+}
+
+// Replace placeholders with actual data
+$template = str_replace('{{title}}', $species_name, $template);
+$template = str_replace('{{species_name}}', $species_name, $template);
+$template = str_replace('{{description}}', $description, $template);
+$template = str_replace('{{image_url}}', $image_url, $template);
+
+// Output the final HTML
+echo $template;
+?>

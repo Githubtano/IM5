@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clownfish Recognition Prototype</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="/images/favccon.jpg">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
 
     <!-- Load TensorFlow.js and Teachable Machine Library -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 </head>
+
 <body>
     <div class="container">
         <h1>Clownfish <span class="orange">Recognition</span></h1>
@@ -18,10 +19,11 @@
         <p class="text">Upload an image of a clownfish for recognition:</p>
 
         <form id="upload-form" method="post" enctype="multipart/form-data">
+            <label for="image-upload">Choose an image:</label>  
             <input type="file" name="image" id="image-upload" accept=".jpg, .jpeg, .png" onchange="previewFile()">
         
             <div id="file-preview" class="hidden">
-                <img id="preview-image" src="#" alt="Image Preview">
+                <img id="preview-image" src="#" alt="Image Preview"> 
             </div>
             
             <button type="submit">Upload</button>
@@ -33,7 +35,7 @@
         </div>
     </div>
     
-    <!-- Load your script -->
+    <!-- Load script -->
     <script src="js/script.js"></script>
 </body>
 </html>
