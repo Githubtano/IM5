@@ -77,6 +77,7 @@ function previewFile() {
         var reader = new FileReader();
         reader.onload = function (e) {
             previewImage.src = e.target.result;
+            localStorage.setItem('uploadedImage', e.target.result);  // Store image data to localStorage
             introText.style.display = "none"; 
             previewHeading.style.display = "block";  
             filePreview.style.display = "block";  // Set the display property of file-preview to block

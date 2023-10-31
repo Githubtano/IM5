@@ -15,7 +15,8 @@ body {
 
 .container {
     text-align: center; 
-    margin: -50vh auto 0;
+    margin: auto;
+    margin-top: 80px;
     padding: 20px;
     width: 80%;
     position: relative;

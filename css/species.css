@@ -1,85 +1,72 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Schibsted+Grotesk&display=swap');
 
 body {
-
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 100vh; 
+    height: 100vh;
 }
 
 .container {
-    text-align: center; 
-    margin: -50vh auto 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
     padding: 20px;
     width: 80%;
-    position: relative;
-    z-index: 1;
 }
 
-/* Text Design */
-h1 {
-    font-family: 'Abril Fatface', sans-serif; 
-    font-size: 60px;
-    color: #000000;
-    letter-spacing: 1.5px;
-}
-.orange {
-    color: #e17000; 
-}
-
-.text {
+.text-container {
     font-family: 'Schibsted Grotesk', sans-serif;
-    font-size: larger;
+    font-size: 18px;
 }
 
-h2  {font-family: 'Schibsted Grotesk', sans-serif;
-    font-size: 20px;
+.left-content, .right-content {
+    flex: 1;
+    margin: 10px;
 }
 
-form {
-    margin: 20px 0;
+.left-content {
+    padding-top: 10%; 
 }
 
-button {
+.text-container {
+    width: 75%;
+}
+
+.right-content {
+    text-align: center;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
     background-color: #3498db;
     color: #fff;
     border: none;
-    padding: 15px 30px; 
+    border-radius: 5px;
     cursor: pointer;
-    font-family: 'Schibsted Grotesk', sans-serif; 
+    font-family: 'Schibsted Grotesk', sans-serif;
     font-size: medium;
-    border-radius: 10px; 
-}
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px; 
-    margin-bottom: 20px; 
 }
 
-button:hover {
-    background-color: #e17000; }
-
-#result {
-    margin-top: 20px;
+.back-button:hover {
+    background-color: #e17000;
 }
 
-.hidden {
-    display: none;
+/* Text Design */
+h1, .text, h2 {
+    font-family: 'Schibsted Grotesk', sans-serif;
 }
 
-/* Show file preview container */
-#file-preview {
-    display: none;
+h1 {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 60px;
+    color: #000000;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    margin-top: -400px; 
 }
-
-#preview-image {
-    max-width: auto;
-    max-height: 500px; /* Define the maximum height for the preview image */
-}
-
