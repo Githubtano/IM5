@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #fff; /* Sets the header background to white */
+    width: auto; /* Adjusts the width to auto */
+    height: 60px;
+    position: fixed;
+    top: 0;
+    right: 0; /* Aligns the header to the right */
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a shadow to the header */
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 20px; /* Adds margin to the right */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 1px solid #e0e0e0; /* Adds a border to the left */
+}
+
+.nav-item {
+    border-right: 1px solid #e0e0e0; /* Adds a border to the right of each item */
+}
+
+.nav-link {
+    color: #000; /* Sets text color to black */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px; /* Adjusts font size */
+    padding: 20px; /* Adjusts padding */
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0; /* Changes background color on hover */
+}
