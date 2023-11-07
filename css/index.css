@@ -1,16 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Schibsted+Grotesk&display=swap');
 
 body {
+    background-color: #F2CF8D;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100vh; 
+    position: relative;
+    overflow: hidden;
+}
+
+#center-image {
+    max-width: 40%;
+    max-height: 70vh;
+    object-fit: contain;
+    position: relative; 
+    margin-left: auto; 
+    margin-right: 15%; 
 }
 
 .container {
@@ -18,10 +31,35 @@ body {
     margin: auto;
     margin-top: 80px;
     padding: 20px;
-    width: 80%;
     position: relative;
     z-index: 1;
+    width: auto; 
+    margin-left: 5%; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
 }
+
+#upload-form {
+    background-color: white;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    width: 50%; /* This ensures it takes the full width of its parent .container */
+}
+
+
+.custom-file-upload, button {
+    padding: 10px 20px; /* Adjust the vertical and horizontal padding */
+    width: 200px; /* Ensures both buttons have the same width */
+    margin-bottom: 10px; /* Space between buttons */
+    margin-top: 10px;
+    text-align: center; /* Centers the text in the button */
+    display: inline-block; /* Ensures that the width property is respected */
+    /* Other styles */
+}
+
 
 #preview-heading {
     position: absolute; 
@@ -37,6 +75,9 @@ h1 {
     font-size: 60px;
     color: #000000;
     letter-spacing: 1.5px;
+    
+    text-align: left;
+
 }
 
 .orange {
@@ -45,7 +86,7 @@ h1 {
 
 .text {
     font-family: 'Schibsted Grotesk', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -70,6 +111,7 @@ form {
     border-radius: 10px;
     border: none;
     display: inline-block;
+    text-transform: uppercase; 
     transition: background-color 0.1s ease-in-out;
     margin-right: 10px;}
 
@@ -80,26 +122,34 @@ form {
 button {
     background-color: #3498db;
     color: #fff;
-    border: none;
     padding: 15px 30px; 
     cursor: pointer;
     font-family: 'Schibsted Grotesk', sans-serif; 
     font-size: medium;
-    border-radius: 10px; 
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase; 
+    display: inline-block;
     transition: background-color 0.1s ease-in-out;
+    margin-right: 10px;
 }
 
 button:hover {
-    background-color: #e17000; 
+    background-color: #e17000;
 }
 
-input[type=file] {
-    border: 2px solid #3498db;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    display: none;
+input[type="file"] {
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px; /* Space between the input and the button */
 }
+
+
 
 input[type=file]:hover {
     border-color: #e17000;
@@ -135,11 +185,40 @@ input[type=file]:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 40px;
+@media (max-width: 1200px) {
+    #center-image {
+        width: 50%;
     }
+
     .container {
-        width: 95%;
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        justify-content: center;
+    }
+
+    #center-image, .container {
+        width: 80%;
+        margin: 20px 0; /* Add some vertical spacing */
+    }
+
+    #center-image {
+        order: 2; /* Image goes below the form */
+        margin-left: 0; /* Reset margin */
+        margin-right: 0; /* Reset margin */
+    }
+
+    .container {
+        order: 1; /* Form goes above the image */
+        align-items: center; /* Center the form items */
+    }
+}
+
+@media (max-width: 480px) {
+    #center-image, .container {
+        width: 90%; /* Increase width for very small devices */
     }
 }

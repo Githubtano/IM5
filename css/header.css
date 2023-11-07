@@ -7,19 +7,21 @@ body {
 .header {
     background-color: #fff; /* Sets the header background to white */
     width: auto; /* Adjusts the width to auto */
-    height: 60px;
+    height: 50px;
     position: fixed;
     top: 0;
     right: 0; /* Aligns the header to the right */
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a shadow to the header */
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
 .nav {
     display: flex;
     align-items: center;
     height: 100%;
-    margin-right: 20px; /* Adds margin to the right */
+    margin-right: 0px; /* Adds margin to the right */
 }
 
 .nav-list {
@@ -43,5 +45,5 @@ body {
 }
 
 .nav-link:hover {
-    background-color: #f0f0f0; /* Changes background color on hover */
+    background-color: #f1f1f1; /* Changes background color on hover */
 }
