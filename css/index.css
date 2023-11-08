@@ -202,7 +202,6 @@ input[type=file]:hover {
 
     #center-image, .container {
         width: 80%;
-        margin: 20px 0; /* Add some vertical spacing */
     }
 
     #center-image {

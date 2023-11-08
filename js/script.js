@@ -19,6 +19,19 @@ const uploadForm = document.getElementById("upload-form");
 const imageInput = document.getElementById("image-upload");
 const resultSection = document.getElementById("result");
 const speciesElement = document.getElementById("species");
+const uploadButton = document.querySelector('button[type="submit"]');
+
+// Button apear and disapear 
+imageInput.addEventListener('change', function() {
+    if (this.files.length > 0) {
+        // If a file is chosen, display the upload button by removing the 'hidden' class
+        uploadButton.classList.remove('hidden');
+    } else {
+        // If no file is chosen (e.g., if the user cancels the file picker), hide the button
+        uploadButton.classList.add('hidden');
+    }
+});
+
 
 // Object to map species names to their respective IDs
 const speciesLookup = {
