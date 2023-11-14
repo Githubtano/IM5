@@ -45,5 +45,5 @@ body {
 }
 
 .nav-link:hover {
-    background-color: #f1f1f1; /* Changes background color on hover */
+   color: #e17000; /* Changes background color on hover */
 }
