@@ -52,7 +52,6 @@ body {
 
 .custom-file-upload, button {
     padding: 10px 20px; /* Adjust the vertical and horizontal padding */
-    width: 200px; /* Ensures both buttons have the same width */
     margin-bottom: 10px; /* Space between buttons */
     margin-top: 10px;
     text-align: center; /* Centers the text in the button */
@@ -104,7 +103,6 @@ form {
 .custom-file-upload {
     background-color: #3498db;
     color: #fff;
-    padding: 15px 30px; 
     cursor: pointer;
     font-family: 'Schibsted Grotesk', sans-serif; 
     font-size: medium;
@@ -113,7 +111,12 @@ form {
     display: inline-block;
     text-transform: uppercase; 
     transition: background-color 0.1s ease-in-out;
-    margin-right: 10px;}
+    margin-right: 10px;
+    padding: 10px 20px; /* Adjust the vertical and horizontal padding */
+    box-sizing: border-box; /* Makes sure the padding is included in the total width and height */
+    width: calc(100% - 40px); /* Adjust width considering the padding */
+    /* Rest of your styles */
+}
 
 .custom-file-upload:hover {
     background-color: #e17000;
