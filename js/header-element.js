@@ -5,7 +5,7 @@ class HeaderElement extends HTMLElement {
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="/species-list" class="nav-link">Species List</a></li>
+                    <li class="nav-item"><a href="/species list" class="nav-link">Species List</a></li>
                     <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
                 </ul>
             </nav>

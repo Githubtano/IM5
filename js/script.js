@@ -55,26 +55,6 @@ uploadForm.addEventListener("submit", async function (e) {
         return;
     }
 
-    // Classify the image using the loaded model
-    const prediction = await model.predict(image);
-    console.log('Prediction:', prediction);  
-    
-    // Sort the prediction array by probability in descending order
-    prediction.sort((a, b) => b.probability - a.probability);
-
-    // Get the species name from the highest probability prediction
-    const speciesName = prediction[0].className.replace(/_/g, ' '); 
-    console.log('Species Name:', speciesName);  
-
-    // Get the species ID using the species name
-    const speciesID = getSpeciesID(speciesName);
-    console.log('Species ID:', speciesID); 
-
-    // Construct the URL for the species information page
-    const infoPageURL = `https://im.chappuiscaetano.ch/php/species.php?id=${speciesID}`;
-    
-    // Redirect the user to the species information page
-    window.location.href = infoPageURL;
 });
 
 // Function to display a file preview when a file is selected
@@ -90,7 +70,39 @@ function previewFile() {
     if (fileInput.files && fileInput.files[0]) {
         var reader = new FileReader();
         reader.onload = function (e) {
-            centerImage.src = e.target.result;  
+            // Set the image source to the result from FileReader
+            centerImage.src = e.target.result;
+
+            // Event listener for when the image is fully loaded
+            centerImage.onload = async function() {
+                // Ensure the model is loaded
+                if (!model) {
+                    console.error('Model not loaded'); 
+                    return;
+                }
+
+                // Now that the image is loaded, perform the prediction
+                const prediction = await model.predict(centerImage);
+                console.log('Prediction:', prediction);  
+
+                // Sort the prediction array by probability in descending order
+                prediction.sort((a, b) => b.probability - a.probability);
+
+                // Get the species name from the highest probability prediction
+                const speciesName = prediction[0].className.replace(/_/g, ' '); 
+                console.log('Species Name:', speciesName);  
+
+                // Get the species ID using the species name
+                const speciesID = getSpeciesID(speciesName);
+                console.log('Species ID:', speciesID); 
+
+                // Construct the URL for the species information page
+                const infoPageURL = `https://im.chappuiscaetano.ch/php/species.php?id=${speciesID}`;
+                
+                // Redirect the user to the species information page
+                window.location.href = infoPageURL;
+            };
+
             // Store image data to localStorage
             localStorage.setItem('uploadedImage', e.target.result); 
             introText.style.display = "none"; 
@@ -100,4 +112,3 @@ function previewFile() {
         reader.readAsDataURL(fileInput.files[0]);
     }
 }
-

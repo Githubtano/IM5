@@ -25,4 +25,3 @@ if ($_FILES["image"]["error"] == UPLOAD_ERR_OK) {
 } else {
     echo "Upload failed.";
 }
-
