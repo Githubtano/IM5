@@ -47,11 +47,13 @@ function getSpeciesID(speciesName) {
 uploadForm.addEventListener("submit", async function (e) {
     e.preventDefault();  
 
-    const image = document.getElementById('center-image'); // Target the center image
+    // Target the center image
+    const image = document.getElementById('center-image'); 
     if (!model) {
         console.error('Model not loaded'); 
         return;
     }
+
     // Classify the image using the loaded model
     const prediction = await model.predict(image);
     console.log('Prediction:', prediction);  

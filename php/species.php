@@ -18,7 +18,7 @@ try {
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         $species_name = htmlspecialchars($row['species_name']);
         $description = htmlspecialchars($row['description']);
-        $image_url = htmlspecialchars($row['image_url']);  // Remove this line if your database doesn't have an image_url column  
+        $image_url = htmlspecialchars($row['image_url']);  
     } else {
         echo "0 results";
         exit;
