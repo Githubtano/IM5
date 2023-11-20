@@ -40,20 +40,51 @@ h1 {
 	align-items: start;
 }
 .species-list {
-    list-style-type: none; /* Removes bullet points */
+    list-style-type: none;
+    position: relative;
+    cursor: pointer;
     padding: 0;
 }
 
-.species-list li {
-    font-size: 50px; /* Increase the font size */
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-family: 'Schibsted Grotesk', sans-serif;
-    font-weight: bold;
+.species-image {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 500px; 
 }
 
-.species-list li span {
-    color: inherit; /* Inherits the color from the parent element */
-    text-decoration: none; /* Removes underline */
-    cursor: default;
+.species-list li:hover .species-image {
+    display: block;
+
+}
+
+.species-list li:hover {
+color: #e17000;
+}
+
+.species-list li {
+    font-size: 20px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.species-list li img {
+    display: none;
+    position: fixed;  /* Use fixed positioning */
+    top: 50%;        /* Position at the center vertically */
+    left: 60%;       /* Position at the center horizontally */
+    transform: translate(-50%, -50%); /* Adjust the position to truly center it */
+    max-width: 500px; /* Adjust as needed */
+    max-height: 500px; /* Adjust as needed */
+    z-index: 100; /* Ensure it's above other elements */
+}
+
+.species-list li:hover img {
+    display: block; /* Show the image when the list item is hovered */
+
 }

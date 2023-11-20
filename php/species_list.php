@@ -32,13 +32,16 @@ try {
     <script src="/js/header-element.js"></script>
     <div class="container">
     <h1>Clownfish   <br>   <span class="orange">Species List</span></h1>
-    <ul class="species-list">
-        <?php foreach ($species_list as $species): ?>
-            <li>
-                <span><?php echo htmlspecialchars($species['species_name']); ?></span>
-            </li>
-        <?php endforeach; ?>
-    </ul>
+    
+<ul class="species-list">
+    <?php foreach ($species_list as $species): ?>
+        <li>
+            <span class="species-name"><?php echo htmlspecialchars($species['species_name']); ?></span>
+            <img src="<?php echo htmlspecialchars($species['image_url']); ?>" alt="<?php echo htmlspecialchars($species['species_name']); ?>" class="species-image">
+        </li>
+    <?php endforeach; ?>
+</ul>
+
 </div>
 </body>
 </html>
