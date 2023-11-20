@@ -154,8 +154,6 @@ input[type="file"] {
     margin-bottom: 20px; /* Space between the input and the button */
 }
 
-
-
 input[type=file]:hover {
     border-color: #e17000;
 }
@@ -190,7 +188,7 @@ input[type=file]:hover {
     margin-top: 150px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1200px) {
     #center-image {
         width: 50%;
@@ -201,6 +199,8 @@ input[type=file]:hover {
     }
 }
 
+
+/*
 @media (max-width: 768px) {
     body {
         justify-content: center;
@@ -211,19 +211,21 @@ input[type=file]:hover {
     }
 
     #center-image {
-        order: 2; /* Image goes below the form */
-        margin-left: 0; /* Reset margin */
-        margin-right: 0; /* Reset margin */
+        order: 2; 
+        margin-left: 0; 
+        margin-right: 0; 
     }
 
     .container {
-        order: 1; /* Form goes above the image */
-        align-items: center; /* Center the form items */
+        order: 1; 
+        align-items: center; 
     }
 }
 
 @media (max-width: 480px) {
     #center-image, .container {
-        width: 90%; /* Increase width for very small devices */
+        width: 90%; 
     }
 }
+
+*/

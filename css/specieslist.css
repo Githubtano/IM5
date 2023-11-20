@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Schibsted+Grotesk&display=swap');
+.orange {
+    color: #e17000; 
+}
 
 body {
     background-color: #F2CF8D;
@@ -35,4 +38,22 @@ h1 {
     align-items: center; 
 	justify-content: space-between;
 	align-items: start;
+}
+.species-list {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+}
+
+.species-list li {
+    font-size: 50px; /* Increase the font size */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-weight: bold;
+}
+
+.species-list li span {
+    color: inherit; /* Inherits the color from the parent element */
+    text-decoration: none; /* Removes underline */
+    cursor: default;
 }

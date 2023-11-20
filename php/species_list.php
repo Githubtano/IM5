@@ -11,6 +11,10 @@ try {
 }
 ?>
 
+<!-- html -->
+<!-- html -->
+<!-- html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,21 +24,21 @@ try {
     <link rel="stylesheet" type="text/css" href="/css/specieslist.css">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
 
+    <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
+
 </head>
 <body>
 <header-element></header-element>
     <script src="/js/header-element.js"></script>
     <div class="container">
-        <h1>Clownfish Species List</h1>
-        <ul>
-            <?php foreach ($species_list as $species): ?>
-                <li>
-                    <a href="species.php?id=<?php echo $species['id']; ?>">
-                        <?php echo htmlspecialchars($species['species_name']); ?>
-                    </a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
+    <h1>Clownfish   <br>   <span class="orange">Species List</span></h1>
+    <ul class="species-list">
+        <?php foreach ($species_list as $species): ?>
+            <li>
+                <span><?php echo htmlspecialchars($species['species_name']); ?></span>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
 </body>
 </html>
