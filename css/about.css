@@ -26,14 +26,16 @@ body {
 }
 
 #gallery {
+    /* Styles for the gallery container */
     overflow: hidden;
     white-space: nowrap;
-    animation: moveSlideshow 20s linear infinite; /* Adjust time as needed */
+    /* Animation for moving images */
 }
 
 #gallery img {
+    /* Styles for images */
     vertical-align: middle;
-    margin-right: 10px; /* Space between images */
+    /* More styles as needed */
 }
 
 @keyframes moveSlideshow {

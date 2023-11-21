@@ -2,16 +2,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const gallery = document.getElementById('gallery');
     
     // Fetch images from the server and add them to the gallery
-    fetch('/php/uploads') // Update with your server's API or image directory path
-        .then(response => response.json()) // Update parsing method based on the server response
-        .then(images => {
-            images.forEach(image => {
-                const img = document.createElement('img');
-                img.src = image.url; // Update based on actual image URL
-                gallery.appendChild(img);
-            });
+    fetch('/php/image_list.php')  // Update with the correct path to the PHP script
+    .then(response => response.json())
+    .then(images => {
+        const gallery = document.getElementById('gallery');
+        images.forEach(imageUrl => {
+            const img = document.createElement('img');
+            img.src = imageUrl;
+            gallery.appendChild(img);
         });
+    })
+    .catch(error => console.error('Error fetching images:', error));
     
-    // Functionality to move the gallery
-    // ... Implement moving gallery logic ...
+
 });
