@@ -1,0 +1,46 @@
+body {
+    background-color: #F2CF8D;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh; 
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-content, .right-content {
+    flex: 1;
+}
+
+#gallery {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: moveSlideshow 20s linear infinite; /* Adjust time as needed */
+}
+
+#gallery img {
+    vertical-align: middle;
+    margin-right: 10px; /* Space between images */
+}
+
+@keyframes moveSlideshow {
+    100% { transform: translateX(-100%); }
+}
+
+
+@keyframes moveSlideshow {
+    100% { transform: translateX(-100%); }
+}
