@@ -2,7 +2,12 @@
 include 'config.php';  // Ensure this path is correct
 
 $directory = __DIR__ . '/uploads/';  // Use an absolute path
-$images = glob($directory . "*.jpg");  // Ensure the path is correct
+$images = array_merge(
+    glob($directory . "*.jpg"),
+    glob($directory . "*.jpeg"),
+    glob($directory . "*.png")
+    
+);
 
 $imageUrls = array_map(function($image) {
     return '/php/uploads/' . basename($image);
