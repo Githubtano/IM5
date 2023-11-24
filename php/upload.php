@@ -1,27 +1,29 @@
 <?php
-// Set the path to store uploaded images
+include 'config.php';
 
-$uploadDir = "uploads/";
+$uploadDir = 'uploads/';
 
-// Create the uploads directory if it doesn't exist
 if (!file_exists($uploadDir)) {
     mkdir($uploadDir, 0777, true);
 }
 
-if ($_FILES["image"]["error"] == UPLOAD_ERR_OK) {
-    $tempName = $_FILES["image"]["tmp_name"];
-    $originalName = $_FILES["image"]["name"];
+if (isset($_FILES['image'])) {
+    if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {        
+        $tempName = $_FILES['image']['tmp_name'];
+        $originalName = $_FILES['image']['name'];
+        $uniqueName = uniqid() . '-' . basename($originalName);
 
-    // Move the uploaded image to the uploads directory
-    move_uploaded_file($tempName, $uploadDir . $originalName);
-
-    // Replace this with your database code to store image information in the database
-    $species = "Amphiprion ocellaris
-    "; // Replace with actual recognition logic
-
-    // Return recognition result as JSON
-    $result = ["species" => $species];
-    echo json_encode($result);
+        if (move_uploaded_file($tempName, $uploadDir . $uniqueName)) {
+            $species = isset($_POST['species']) ? $_POST['species'] : 'Unknown';
+            $result = ["species" => $species, "uploadedImage" => $uploadDir . $uniqueName];
+            echo json_encode($result);
+        } else {
+            echo json_encode(["error" => "Failed to move uploaded file."]);
+        }
+    } else {
+        echo json_encode(["error" => "Upload error: " . $_FILES['image']['error']]);
+    }
 } else {
-    echo "Upload failed.";
+    echo json_encode(["error" => "No image uploaded."]);
 }
+?>

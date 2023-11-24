@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Schibsted+Grotesk&display=swap');
+.orange {
+    color: #e17000; 
+}
 
 body {
     background-color: #F2CF8D;
@@ -23,44 +26,60 @@ h1 {
     color: #000000;
     letter-spacing: 1.5px;
     text-align: left;
-
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+.left-content {
+    width: 70%; /* Adjust based on layout */
     margin: auto;
-    margin-top: 100px;
-    min-height: 500px;
-    padding: 20px;
-    position: relative;
+    margin-left: 190px;
+    margin-top: 80px;
+    text-align: left; /* Align text to the left */
+    z-index: 2;
+}
+
+.left-content p {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    width: 25%;
+    margin-top: 20px; /* Space between the title and the text */
+}
+
+
+ .right-content {
+    width: 35%; /* Adjust based on your layout */
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow: hidden;
     z-index: 1;
-    width: auto; 
-    margin-left: 10%; 
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: space-between;
-    align-items: start;
-    }
-
-
-.left-content, .right-content {
-    flex: 1;
+    margin-right: 10px;
+ }
+    
+ .waterfall-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 5px; 
+    animation: moveWaterfall 60s linear infinite; 
+}
+    
+.waterfall-gallery img {
+    height: 200px;      /* Set the height to 350px */
+    width: 200px;       /* Set the width to 350px */
+    object-fit: contain; /* Ensures the entire image is visible */
+    object-position: center; /* Centers the image within the frame */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional, adds a subtle shadow */
+    background-color: rgba(255, 255, 255, 0.468); /* Fills the empty space around the image if any */
 }
 
 #gallery {
-    /* Styles for the gallery container */
     overflow: hidden;
     white-space: nowrap;
-    /* Animation for moving images */
 }
 
 #gallery img {
-    /* Styles for images */
     vertical-align: middle;
-    /* More styles as needed */
 }
 
 @keyframes moveSlideshow {
@@ -70,4 +89,9 @@ h1 {
 
 @keyframes moveSlideshow {
     100% { transform: translateX(-100%); }
+}
+
+@keyframes moveWaterfall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
 }
