@@ -1,29 +1,38 @@
 <?php
-include 'config.php';
+include 'config.php';  // Include the config.php file
 
-$uploadDir = 'uploads/';
+header('Content-Type: application/json');
+echo json_encode(["message" => "Test response"]);
 
-if (!file_exists($uploadDir)) {
-    mkdir($uploadDir, 0777, true);
+$targetDir = __DIR__ . '/uploads/'; // Target directory on the server
+
+// Create the directory if it does not exist
+if (!file_exists($targetDir)) {
+    mkdir($targetDir, 0777, true);
 }
 
-if (isset($_FILES['image'])) {
-    if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {        
-        $tempName = $_FILES['image']['tmp_name'];
-        $originalName = $_FILES['image']['name'];
-        $uniqueName = uniqid() . '-' . basename($originalName);
+$response = []; // Initialize response array
 
-        if (move_uploaded_file($tempName, $uploadDir . $uniqueName)) {
-            $species = isset($_POST['species']) ? $_POST['species'] : 'Unknown';
-            $result = ["species" => $species, "uploadedImage" => $uploadDir . $uniqueName];
-            echo json_encode($result);
-        } else {
-            echo json_encode(["error" => "Failed to move uploaded file."]);
-        }
+// Check if a file is being uploaded
+if (isset($_FILES['image']['tmp_name'])) {
+    $tempName = $_FILES['image']['tmp_name'];
+    $originalName = $_FILES['image']['name'];
+    $targetFilePath = $targetDir . basename($originalName);
+
+    // Attempt to move the uploaded file to the target directory
+    if (move_uploaded_file($tempName, $targetFilePath)) {
+        $response = [
+            "message" => "File uploaded successfully",
+            "path" => $targetFilePath,
+            "debug" => $_FILES['image']  // Include debug information (optional)
+        ];
     } else {
-        echo json_encode(["error" => "Upload error: " . $_FILES['image']['error']]);
+        $response = ["error" => "Sorry, there was an error uploading your file."];
     }
 } else {
-    echo json_encode(["error" => "No image uploaded."]);
+    $response = ["error" => "No file received"];
 }
+
+// Output the single JSON-encoded string
+echo json_encode($response);
 ?>

@@ -1,3 +1,4 @@
+
 // Define the URL of the model
 const modelURL = 'https://teachablemachine.withgoogle.com/models/ORHSpBtYq/';
 
