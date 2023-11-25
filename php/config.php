@@ -4,7 +4,7 @@ $dbHost = "localhost:3306";  // Hostname and port
 $dbName = "IM5";            // Database name
 $dbUser = "IM5";            // Database username
 $dbPass = "cae266cha";      // Database password
-$charset = 'utf8mb4';       // Character set$
+$charset = 'utf8mb4';       // Character set
 
 
 // Attempt to connect to the database

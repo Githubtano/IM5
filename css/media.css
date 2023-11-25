@@ -1,0 +1,88 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Schibsted+Grotesk&display=swap');
+
+/* Media queries for screens smaller than or equal to 1170px wide */
+@media only screen and (max-width: 1170px) {
+
+    /* Adjusting the main container */
+    .container {
+        margin: 0 10px;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Header and Footer adjustments */
+    .header, .footer {
+        padding: 10px;
+    }
+
+    /* Adjusting the layout for the navigation menu */
+    .nav-menu {
+        display: none; /* Assuming a different layout for mobile, like a hamburger menu */
+    }
+
+    /* Adjusting font sizes for readability */
+    body, .text {
+        font-size: 16px;
+    }
+
+    /* Scaling images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Adjusting buttons and links for easier interaction */
+    .button, a {
+        padding: 15px;
+        font-size: 18px; /* Larger font size for links and buttons */
+    }
+
+    /* Adjusting specific elements */
+    #center-image {
+        max-width: 80%;
+        margin: 20px 0;
+    }
+
+    #preview-heading, #file-preview, #result {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Adjusting form layout */
+    #upload-form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Adjusting navigation links */
+    .nav-item {
+        padding: 10px;
+    }
+
+    /* Adjusting typography */
+    h1, h2 {
+        font-size: 40px; /* Smaller font size for headings */
+        text-align: center;
+    }
+
+    /* Specific adjustments for the About page */
+    .left-content {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .right-content {
+        width: 100%;
+        position: relative; /* Changing from fixed to relative */
+    }
+
+    .waterfall-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Less columns for smaller screens */
+    }
+    
+    /* Other specific adjustments as needed */
+}

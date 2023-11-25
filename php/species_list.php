@@ -23,15 +23,18 @@ try {
     <title>Clownfish Species List</title>
     <link rel="stylesheet" type="text/css" href="/css/specieslist.css">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/media.css">
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
 
 </head>
+
 <body>
-<header-element></header-element>
+<header-element>
     <script src="/js/header-element.js"></script>
+</header-element>
     <div class="container">
-    <h1>Clownfish   <br>   <span class="orange">Species List</span></h1>
+    <h1>Clownfish <br> <span class="orange">Species List</span></h1>
     
 <ul class="species-list">
     <?php foreach ($species_list as $species): ?>
