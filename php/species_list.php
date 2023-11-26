@@ -35,7 +35,7 @@ try {
     <script src="/js/header-element.js"></script>
 </header-element>
     <div class="container">
-    <h1>Clownfish <br> <span class="orange">Species List</span></h1>
+    <h1 class="title">Clownfish <br> <span class="orange">Species List</span></h1>
     
 <ul class="species-list">
     <?php foreach ($species_list as $species): ?>

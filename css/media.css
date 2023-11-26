@@ -1,15 +1,21 @@
+.hamburger {
+    display: none;
+}
 
 @media only screen and (max-width: 1170px) {
+    
     .hamburger {
         display: block;
         position: fixed;
-        top: 20px;
+        top: -20px;
         right: 20px;
+        margin-right: -10px;
         z-index: 10;
         font-size: 30px;
         cursor: pointer;
         border: none;
         background: transparent;
+        z-index: 1000;
     }
 
     /* Styles for the navigation menu */
@@ -25,7 +31,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        z-index: 9;
+        z-index: 1000;
     }
     
     /* Styling for navigation links */
@@ -65,16 +71,22 @@
 
 @media only screen and (max-width: 1170px) {
 
+    h1 {
+        font-size: 40px !important;
+        margin-top: -290px  !important;
+        margin-bottom: 10px !important;
+        margin-left: -187px !important;
+
+    }
     /* Adjusting the main container */
     .container {
-        margin: 0 10px;
         padding: 20px;
         flex-direction: column;
         align-items: center;
         display: grid;
-        justify-items: center;
         justify-content: center;
         align-content: space-around;
+        margin-top: auto;
     }
 
     /* Adjusting the layout for the navigation menu */
@@ -99,9 +111,19 @@
         font-size: 18px; /* Larger font size for links and buttons */
     }
 
+    button, .custom-file-upload {
+        height: auto;
+        margin: inherit;
+    }
+
     /* Adjusting specific elements */
     #center-image {
         margin: auto;
+        margin-left: 0px !important;
+        margin-top: -120px !important;
+        width: 320px;
+        height: 200px;
+
     }
 
     #preview-heading, #file-preview, #result {
@@ -112,9 +134,13 @@
 
     /* Adjusting form layout */
     #upload-form {
-        width: 100%;
-        padding: 15px;
+        width: 75%;
+        padding: 10px;
+        margin-bottom: -300px;
+        position: absolute;
+        height: 215px;
     }
+
 
     /* Adjusting navigation links */
     .nav-item {
@@ -122,32 +148,80 @@
     }
 
     /* Adjusting typography */
+
+    h1, .title {
+        margin: 0px !important;
+        margin-top: -246px !important;
+        margin-left: -15px !important;
+
+    }
+
+    h1 { 
+        font-size: 10%;
+    }
+
     h1, h2 {
         font-size: 250%; 
         margin-block: -50%;
         text-align: center;
+        font-size: 40px !important;
+        margin-top: -290px !important;
+        margin-bottom: 10px !important;
+        margin-left: -150px !important;
     }
 
     /* Specific adjustments for the About page */
     .left-content {
         width: 100%;
-        margin-left: 0;
-        text-align: center;
+        text-align: left;
+        margin-top: 370px;        
+        margin-left: 24px;
+    }
+
+    h3 {
+        font-family: 'Abril Fatface', sans-serif;
+        font-size: 30px !important ;
+        color: #000000;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+        margin-top: 20px; 
+        text-align: center !important ;
+    }
+    h1.Reco {
+        margin-left: 24px !important;
+    }
+
+    p.abouthis {
+        text-align: left;
+        width: 300px;
+        margin-left: 25px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .species-list li img {
+        width: 300px;
+        position: absolute;
+        margin-top: 235px;
+    }
+
+    ul.species-list {
+        margin-top: -340px;
     }
 
     .right-content {
         width: 100%;
         position: relative; /* Changing from fixed to relative */
+        margin-bottom: -400px;
     }
 
     .waterfall-gallery {
         grid-template-columns: repeat(2, 1fr); /* Less columns for smaller screens */
     }
+
+    
     
 }
 
-.hamburger {
-    display: none;
-}
 
 

@@ -20,13 +20,11 @@ class HeaderElement extends HTMLElement {
 // Define the custom element
 customElements.define('header-element', HeaderElement);
 
-// Add event listener for DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
 
     hamburger.addEventListener('click', function() {
         navMenu.classList.toggle('show');
-        console.log('Hamburger clicked'); // For debugging
     });
 });

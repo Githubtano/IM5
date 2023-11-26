@@ -1,4 +1,3 @@
-
 .left-content {
     width: 70%; 
     margin: auto;
@@ -16,6 +15,13 @@
     margin-top: 20px; 
 }
 
+p.abouthis {
+    width: 300px;
+    margin-left: -18px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
  .right-content {
     width: 35%; 
     position: fixed;
@@ -26,7 +32,7 @@
     z-index: 1;
     margin-right: 10px;
  }
-    
+
  .waterfall-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
