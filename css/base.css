@@ -1,0 +1,79 @@
+/* base.css */
+
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Schibsted+Grotesk&display=swap');
+
+/* Common Body Styling */
+body {
+    background-color: #F2CF8D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Common Typography */
+h1 {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 60px;
+    color: #000000;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+}
+
+.orange {
+    color: #e17000; 
+}
+
+.text, .nav-link, .button, button {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Button Styling */
+button, .custom-file-upload {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 30px; 
+    cursor: pointer;
+    font-size: medium;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase; 
+    display: inline-block;
+    transition: background-color 0.1s ease-in-out;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+button:hover, .custom-file-upload:hover {
+    background-color: #e17000;
+}
+
+/* Common Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Input File */
+input[type="file"] {
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px; /* Space between the input and the button */
+}
+
+input[type=file]:hover {
+    border-color: #e17000;
+}

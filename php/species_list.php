@@ -24,6 +24,7 @@ try {
     <link rel="stylesheet" type="text/css" href="/css/specieslist.css">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" type="text/css" href="/css/media.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
 

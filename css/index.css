@@ -1,21 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Schibsted+Grotesk&display=swap');
-
-body {
-    background-color: #F2CF8D;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 100vh; 
-    position: relative;
-    overflow: hidden;
-}
 
 #center-image {
     max-width: 40%;
@@ -50,39 +32,23 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    width: 50%; /* This ensures it takes the full width of its parent .container */
+    width: 50%; 
 }
-
 
 .custom-file-upload, button {
-    padding: 10px 20px; /* Adjust the vertical and horizontal padding */
-    margin-bottom: 10px; /* Space between buttons */
+    padding: 10px 20px; 
+    margin-bottom: 10px; 
     margin-top: 10px;
-    text-align: center; /* Centers the text in the button */
-    display: inline-block; /* Ensures that the width property is respected */
-    /* Other styles */
+    text-align: center; 
+    display: inline-block; 
+   
 }
-
 
 #preview-heading {
     left: 0; 
     width: 100%; 
     text-align: center; 
     display: none; 
-}
-
-/* Text Design */
-h1 {
-    font-family: 'Abril Fatface', sans-serif; 
-    font-size: 60px;
-    color: #000000;
-    letter-spacing: 1.5px;
-    text-align: left;
-
-}
-
-.orange {
-    color: #e17000; 
 }
 
 .text {
@@ -101,7 +67,10 @@ form {
     margin: 50px 0 40px;
 }
 
-/* Button */
+/* -----Upload Button----- */
+/* -----Upload Button----- */
+/* -----Upload Button----- */
+
 .custom-file-upload {
     background-color: #3498db;
     color: #fff;
@@ -114,44 +83,13 @@ form {
     text-transform: uppercase; 
     transition: background-color 0.1s ease-in-out;
     margin-right: 10px;
-    padding: 10px 20px; /* Adjust the vertical and horizontal padding */
-    box-sizing: border-box; /* Makes sure the padding is included in the total width and height */
-    width: calc(100% - 40px); /* Adjust width considering the padding */
-    /* Rest of your styles */
+    padding: 10px 20px; 
+    box-sizing: border-box; 
+    width: calc(100% - 40px); 
 }
 
 .custom-file-upload:hover {
     background-color: #e17000;
-}
-
-button {
-    background-color: #3498db;
-    color: #fff;
-    padding: 15px 30px; 
-    cursor: pointer;
-    font-family: 'Schibsted Grotesk', sans-serif; 
-    font-size: medium;
-    border-radius: 10px;
-    border: none;
-    text-transform: uppercase; 
-    display: inline-block;
-    transition: background-color 0.1s ease-in-out;
-    margin-right: 10px;
-}
-
-button:hover {
-    background-color: #e17000;
-}
-
-input[type="file"] {
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-    display: block;
-    width: 100%;
-    margin-bottom: 20px; /* Space between the input and the button */
 }
 
 input[type=file]:hover {
@@ -168,14 +106,17 @@ input[type=file]:hover {
 
 #intro-text {
     display: block; 
-	margin-bottom: 30px;/* Ensure intro-text is initially visible */
+	margin-bottom: 30px;
 }
 
 #preview-heading {
-    display: none; /* Ensure preview-heading is initially hidden */
+    display: none; 
 }
 
-/* Show file preview container */
+/* -----Show file preview----- */
+/* -----Show file preview----- */
+/* -----Show file preview----- */
+
 #file-preview {
     margin-top: 20px;
     display: none;
@@ -187,45 +128,3 @@ input[type=file]:hover {
     object-fit: contain; 
     margin-top: 150px;
 }
-
-
-@media (max-width: 1200px) {
-    #center-image {
-        width: 50%;
-    }
-
-    .container {
-        width: 50%;
-    }
-}
-
-
-/*
-@media (max-width: 768px) {
-    body {
-        justify-content: center;
-    }
-
-    #center-image, .container {
-        width: 80%;
-    }
-
-    #center-image {
-        order: 2; 
-        margin-left: 0; 
-        margin-right: 0; 
-    }
-
-    .container {
-        order: 1; 
-        align-items: center; 
-    }
-}
-
-@media (max-width: 480px) {
-    #center-image, .container {
-        width: 90%; 
-    }
-}
-
-*/

@@ -1,40 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Schibsted+Grotesk&display=swap');
-.orange {
-    color: #e17000; 
-}
-
-body {
-    background-color: #F2CF8D;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 100vh; 
-    position: relative;
-    overflow: hidden;
-    flex-direction: column;
-}
-
-h1 {
-    font-family: 'Abril Fatface', sans-serif; 
-    font-size: 60px;
-    color: #000000;
-    letter-spacing: 1.5px;
-    text-align: left;
-}
 
 .left-content {
-    width: 70%; /* Adjust based on layout */
+    width: 70%; 
     margin: auto;
     margin-left: 190px;
     margin-top: 80px;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
     z-index: 2;
 }
 
@@ -43,12 +13,11 @@ h1 {
     font-size: 16px;
     font-weight: bold;
     width: 25%;
-    margin-top: 20px; /* Space between the title and the text */
+    margin-top: 20px; 
 }
 
-
  .right-content {
-    width: 35%; /* Adjust based on your layout */
+    width: 35%; 
     position: fixed;
     top: 0;
     right: 0;
@@ -66,12 +35,12 @@ h1 {
 }
     
 .waterfall-gallery img {
-    height: 200px;      /* Set the height to 350px */
-    width: 200px;       /* Set the width to 350px */
-    object-fit: contain; /* Ensures the entire image is visible */
-    object-position: center; /* Centers the image within the frame */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional, adds a subtle shadow */
-    background-color: rgba(255, 255, 255, 0.468); /* Fills the empty space around the image if any */
+    height: 200px;      
+    width: 200px;      
+    object-fit: contain; 
+    object-position: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    background-color: rgba(255, 255, 255, 0.468); 
 }
 
 #gallery {

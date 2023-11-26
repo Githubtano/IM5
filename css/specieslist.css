@@ -1,29 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Schibsted+Grotesk&display=swap');
-.orange {
-    color: #e17000; 
-}
-
-body {
-    background-color: #F2CF8D;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 100vh;
-    flex-direction: column;
-}
-
-
-h1 {
-    font-family: 'Abril Fatface', sans-serif;
-    font-size: 60px;
-    color: #000000;
-    letter-spacing: 1.5px;
-    margin-bottom: 20px;
-    margin-top: 20px; 
-}
 
 .container {
     margin: auto;
@@ -76,16 +50,16 @@ color: #e17000;
 
 .species-list li img {
     display: none;
-    position: fixed;  /* Use fixed positioning */
-    top: 50%;        /* Position at the center vertically */
-    left: 60%;       /* Position at the center horizontally */
-    transform: translate(-50%, -50%); /* Adjust the position to truly center it */
-    max-width: 500px; /* Adjust as needed */
-    max-height: 500px; /* Adjust as needed */
-    z-index: 100; /* Ensure it's above other elements */
+    position: fixed;  
+    top: 50%;        
+    left: 60%;      
+    transform: translate(-50%, -50%);
+    max-width: 500px; 
+    max-height: 500px; 
+    z-index: 100; 
 }
 
 .species-list li:hover img {
-    display: block; /* Show the image when the list item is hovered */
+    display: block; 
 
 }

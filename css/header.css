@@ -5,14 +5,14 @@ body {
 }
 
 .header {
-    background-color: #fff; /* Sets the header background to white */
-    width: auto; /* Adjusts the width to auto */
+    background-color: #fff; 
+    width: auto; 
     height: 50px;
     position: fixed;
     top: 0;
-    right: 0; /* Aligns the header to the right */
+    right: 0; 
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a shadow to the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
     margin-top: 20px;
 }
@@ -21,7 +21,7 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
-    margin-right: 0px; /* Adds margin to the right */
+    margin-right: 0px; 
 }
 
 .nav-list {
@@ -29,21 +29,21 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    border-left: 1px solid #e0e0e0; /* Adds a border to the left */
+    border-left: 1px solid #e0e0e0; 
 }
 
 .nav-item {
-    border-right: 1px solid #e0e0e0; /* Adds a border to the right of each item */
+    border-right: 1px solid #e0e0e0; 
 }
 
 .nav-link {
-    color: #000; /* Sets text color to black */
+    color: #000; 
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px; /* Adjusts font size */
-    padding: 20px; /* Adjusts padding */
+    font-size: 16px; 
+    padding: 20px; 
 }
 
 .nav-link:hover {
-   color: #e17000; /* Changes background color on hover */
+   color: #e17000; 
 }
