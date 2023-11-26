@@ -24,10 +24,19 @@ h1 {
     letter-spacing: 1.5px;
     margin-bottom: 20px;
     margin-top: 20px; 
+    text-align: left;
 }
 
 .orange {
     color: #e17000; 
+}
+
+#center-image {
+    max-height: 40vh;
+    object-fit: contain;
+    position: absolute;
+    margin-left: 25%; 
+    margin-right: auto; 
 }
 
 .text, .nav-link, .button, button {
@@ -71,7 +80,7 @@ input[type="file"] {
     z-index: -1;
     display: block;
     width: 100%;
-    margin-bottom: 20px; /* Space between the input and the button */
+    margin-bottom: 20px; 
 }
 
 input[type=file]:hover {
