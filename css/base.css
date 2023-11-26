@@ -5,7 +5,7 @@
 
 /* Common Body Styling */
 body {
-    background-color: #F2CF8D;
+    background-color: #ffa60087;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,6 +59,7 @@ button, .custom-file-upload {
     transition: background-color 0.1s ease-in-out;
     margin-right: 10px;
     box-sizing: border-box;
+    margin-top: 25px;
 }
 
 button:hover, .custom-file-upload:hover {
