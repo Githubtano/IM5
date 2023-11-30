@@ -177,6 +177,10 @@
         margin-top: 370px;        
         margin-left: 24px;
     }
+    p#species-count {
+        margin-top: -349px !important;
+        margin-left: -15px;
+    }
 
     h3 {
         font-family: 'Abril Fatface', sans-serif;
@@ -201,12 +205,14 @@
 
     .species-list li img {
         width: 300px;
+        margin-left: -34px;
         position: absolute;
-        margin-top: 235px;
+        margin-top: 222px;
     }
 
     ul.species-list {
-        margin-top: -340px;
+        margin-top: -467px;
+        margin-left: -36px;
     }
 
     .right-content {

@@ -36,6 +36,13 @@ h1.title {
     margin-top: 0px;
 }
 
+p#species-count{
+    font-family: 'Schibsted Grotesk', sans-serif;
+    margin-top: -110px;
+    font-size: 20px;
+    color: #000000;
+}
+
 h3 {
     font-family: 'Abril Fatface', sans-serif;
     font-size: 60px;
