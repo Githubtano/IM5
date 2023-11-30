@@ -221,18 +221,28 @@
     }
 
     .right-content {
-        width: 100%;
         position: relative; /* Changing from fixed to relative */
-        margin-bottom: -400px;
+        top: auto; /* Resetting top position */
+        right: auto; /* Resetting right position */
+        width: 100%; /* Full width */
+        height: auto; /* Auto height for content */
+        overflow: auto; /* Ensure content is not hidden */
+        margin-right: -24px; /* Resetting margin */
     }
 
     .waterfall-gallery {
-        grid-template-columns: repeat(2, 1fr); /* Less columns for smaller screens */
+        grid-template-columns: repeat(1, 1fr); /* Adjust column count for mobile */
     }
+    .waterfall-gallery img {
+        height: 100%; /* Auto height for responsiveness */
+        width: 100%; /* Full width within the grid column */
+        object-fit: contain; /* Keep aspect ratio */
+    }
+
+}
 
     
     
-}
 
 
 
