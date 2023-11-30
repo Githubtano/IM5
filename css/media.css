@@ -103,6 +103,7 @@
     img {
         max-width: 100%;
         height: auto;
+        margin-top: -490px;
     }
 
     /* Adjusting buttons and links for easier interaction */
@@ -139,6 +140,10 @@
         margin-bottom: -300px;
         position: absolute;
         height: 215px;
+    }
+
+    .text-container {
+        margin-top: -503px;
     }
 
 

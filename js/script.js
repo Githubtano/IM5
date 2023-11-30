@@ -29,22 +29,36 @@ document.getElementById('upload-form').addEventListener('submit', function(e) {
             return response.text();
         })
         .then(data => {
-            try {
-                const jsonData = JSON.parse(data); // Parse the text as JSON
-                console.log('Success:', jsonData);
-            } catch (e) {
-                console.error('Error parsing JSON:', e);
-                console.error('Received data:', data);
-            }
+            // Split the response string by "}{"
+            var parts = data.split('}{');
+        
+            // Add the missing braces to each part
+            parts = parts.map((part, index) => {
+                if (index === 0) {
+                    // Add a closing brace to the first part
+                    return part + '}';
+                } else if (index === parts.length - 1) {
+                    // Add an opening brace to the last part
+                    return '{' + part;
+                } else {
+                    // Add both braces to the middle parts
+                    return '{' + part + '}';
+                }
+            });
+        
+            // Now parts is an array of strings, each string is a valid JSON object
+            // You can parse each part individually
+            var jsonParts = parts.map(part => JSON.parse(part));
+        
+            // Now jsonParts is an array of objects
+            console.log(jsonParts);
         })
     } 
 });
 
-
 // machinelearning
 // machinelearning
 // machinelearning
-
 
 // Define the URL of the model
 const modelURL = 'https://teachablemachine.withgoogle.com/models/ORHSpBtYq/';
@@ -78,7 +92,6 @@ imageInput.addEventListener('change', function() {
         uploadButton.classList.add('hidden');
     }
 });
-
 
 // Object to map species names to their respective IDs
 const speciesLookup = {
@@ -127,6 +140,7 @@ uploadForm.addEventListener("submit", async function (e) {
 // Function to display a file preview when a file is selected
 function previewFile() {
     console.log('previewFile called');  
+    var fileInput = document.getElementById('image-upload'); 
     var centerImage = document.getElementById("center-image"); 
     var introText = document.getElementById("intro-text");
     var previewHeading = document.getElementById("preview-heading");
@@ -136,10 +150,10 @@ function previewFile() {
         var reader = new FileReader();
         reader.onload = function (e) {
             centerImage.src = e.target.result;  
-            localStorage.setItem('uploadedImage', e.target.result);  // Store image data to localStorage
+            localStorage.setItem('uploadedImage', e.target.result);  
             introText.style.display = "none"; 
-            previewHeading.style.display = "block";  // Hide the preview heading
-            filePreview.style.display = "none";  // Hide the file preview
+            previewHeading.style.display = "block";  
+            filePreview.style.display = "none";  
         };
         reader.readAsDataURL(fileInput.files[0]);
     }
