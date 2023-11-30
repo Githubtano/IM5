@@ -130,8 +130,11 @@ uploadForm.addEventListener("submit", async function (e) {
     const speciesID = getSpeciesID(speciesName);
     console.log('Species ID:', speciesID); 
 
+    // Get the prediction probability (rounded to 2 decimal places)
+    const predictionProbability = (prediction[0].probability * 100).toFixed(2);
+
     // Construct the URL for the species information page
-    const infoPageURL = `https://im.chappuiscaetano.ch/php/species.php?id=${speciesID}`;
+    const infoPageURL = `https://im.chappuiscaetano.ch/php/species.php?id=${speciesID}&probability=${predictionProbability}`;
     
     // Redirect the user to the species information page
     window.location.href = infoPageURL;

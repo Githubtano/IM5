@@ -9,6 +9,14 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     exit;
 }
 
+// Check if 'probability' parameter is set in URL
+if (isset($_GET['probability'])) {
+    $probability = $_GET['probability'];  // Get the prediction probability from the URL
+} else {
+    echo "Invalid Probability";
+    exit;
+}
+
 try {
     $stmt = $db->prepare("SELECT * FROM clownfish_species WHERE id = :id");
     $stmt->bindParam(':id', $species_id, PDO::PARAM_INT);
@@ -39,6 +47,7 @@ if ($template === false) {
 // Replace placeholders with actual data
 $template = str_replace('{{title}}', $species_name, $template);
 $template = str_replace('{{species_name}}', $species_name, $template);
+$template = str_replace('{{probability}}', $probability, $template);
 $template = str_replace('{{description}}', $description, $template);
 $template = str_replace('{{image_url}}', $image_url, $template);
 

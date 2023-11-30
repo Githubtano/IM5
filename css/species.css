@@ -48,6 +48,14 @@ h1, .text, h2 {
     font-family: 'Schibsted Grotesk', sans-serif;
 }
 
+h5 {
+    font-size: 14px;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-weight: bold;
+    font-style: oblique;
+
+}
+
 #uploaded-image {
     max-width: 90%;
     max-height: 30vh;
