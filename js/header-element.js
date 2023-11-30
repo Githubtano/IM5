@@ -1,4 +1,8 @@
+
 // Define the custom header element
+// Define the custom header element
+// Define the custom header element
+
 class HeaderElement extends HTMLElement {
   connectedCallback() {
 
@@ -17,7 +21,10 @@ class HeaderElement extends HTMLElement {
   }
 }
 
-// Define the custom element
+// Hamburger On Phone
+// Hamburger On Phone
+// Hamburger On Phone
+
 customElements.define('header-element', HeaderElement);
 
 document.addEventListener('DOMContentLoaded', function() {

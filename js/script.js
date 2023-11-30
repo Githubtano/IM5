@@ -126,17 +126,16 @@ uploadForm.addEventListener("submit", async function (e) {
 
 // Function to display a file preview when a file is selected
 function previewFile() {
-    console.log('previewFile called');  // Debug log
-    var centerImage = document.getElementById("center-image"); // Get the center image element
-    var fileInput = document.getElementById("image-upload");
+    console.log('previewFile called');  
+    var centerImage = document.getElementById("center-image"); 
     var introText = document.getElementById("intro-text");
     var previewHeading = document.getElementById("preview-heading");
-    var filePreview = document.getElementById("file-preview");  // Get a reference to the file-preview div
+    var filePreview = document.getElementById("file-preview"); 
 
     if (fileInput.files && fileInput.files[0]) {
         var reader = new FileReader();
         reader.onload = function (e) {
-            centerImage.src = e.target.result;  // Update the src of the center image
+            centerImage.src = e.target.result;  
             localStorage.setItem('uploadedImage', e.target.result);  // Store image data to localStorage
             introText.style.display = "none"; 
             previewHeading.style.display = "block";  // Hide the preview heading
