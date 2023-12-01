@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Schibsted+Grotesk&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    overflow-x: hidden; 
+    box-sizing: border-box; 
+    width: 100vw; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: stretch; 
+}
+
+.welcome-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    height: 100%; 
+    width: 100%; 
+    background: linear-gradient(to bottom, #010122, #000000);
+}
+
+/* ----Top Contnent---- */
+/* ----Top Contnent---- */
+/* ----Top Contnent---- */
+
+.welcome-page .top {
+    position: relative;
+    display: flex;
+    height: 185px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    align-self: stretch;
+    width: 100%;
+    flex: 1;
+}
+
+.welcome-page .spatial-audio {
+    position: absolute;
+    width: 317px;
+    height: 94px;
+    font-family: "Kokoro-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    top: 50px;
+}
+
+/* ----Mid  Contnent---- */
+/* ----Mid  Contnent---- */
+/* ----Mid  Contnent---- */
+
+.welcome-page .mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 25px 0px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    border: 1px solid;
+    border-color: #000000;
+    flex: 1;
+}
+
+.welcome-page .recognise-clownfish {
+    position: relative;
+    width: fit-content;
+    font-family: "Anek Bangla-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.welcome-page .text-wrapper {
+    color: #ffffff;
+}
+
+.welcome-page .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 19px 0px;
+    position: relative;
+    flex: 0 0 auto;
+    all: unset;
+    box-sizing: border-box;
+}
+
+.welcome-page .button-enter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.welcome-page .ellipse {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /
+
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.welcome-page .ellipse {
+    animation: pulsate 2s infinite ease-in-out;
+}
+/* ---------- Enter --------- */
+/* ---------- Enter --------- */
+/* ---------- Enter --------- */
+
+.welcome-page .div {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-family: "Kokoro-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.welcome-page .div:hover {
+    transform: translate(-50%, -50%) scale(1.1); 
+    color:#e17000;
+}
+
+
+/* ----Contnent  Bottom---- */
+/* ----Contnent  Bottom---- */
+/* ----Contnent  Bottom---- */
+
+.welcome-page .buttom {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 185px;
+    flex: 1;
+}

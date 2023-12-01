@@ -1,54 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clownfish Recognition Prototype</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="/css/header.css">
-    <link rel="stylesheet" type="text/css" href="/css/media.css">
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome</title>
+        <link rel="stylesheet" type="text/css" href="css/welcome.css">
 
-    <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
-
-    <!-- Load TensorFlow.js and Teachable Machine Library -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-</head>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
+    </head>
 
     <body>
-        <header-element> 
-            <script src="js/header-element.js"></script>
-        </header-element>
+        <div class="welcome-page">
+            <div class="top">
+                <div class="spatial-audio">Spatial Audio <br />Underwater</div>
+            </div>
+            <div class="mid">
+                <p class="recognise-clownfish">
+                    <span class="text-wrapper">Recognise Clownfish</span>
+                </p>
 
-        <div class="container">
-            <div id="intro-text">
-                <h1>Clownfish<br><span class="orange">Recognition</span></h1>
+                <button class="button">
+                    <div class="button-enter">
+                        <a href="https://im.chappuiscaetano.ch/main.html">
+                            <img class="ellipse" src="/images/Ellipse 1.png" alt="Ellipse Image" />
+                            <div class="div">Enter</div>
+                        </a>
+                       
+                    </div>
+                </button>
             </div>
 
-            <div id="preview-heading" class="hidden">
-                <h2> Image Preview</h2>
-            </div>  
-        
-            <div id="file-preview" class="hidden">
-                <img id="preview-image" src="#" alt="Image Preview">
-            </div>
-
-            <form id="upload-form" method="post" enctype="multipart/form-data">
-                <p class="text">Upload an image of a clownfish for recognition</p>
-                <label for="image-upload" class="custom-file-upload">Choose File</label>
-                <input type="file" name="image" id="image-upload" accept=".jpg, .jpeg, .png" onchange="previewFile()">
-                <button type="submit" class="hidden">Upload</button>     
-            </form>
-        
-            <div id="result" class="hidden">
-                <h2>Recognition Result:</h2>
-                <p id="species"></p>
-            </div>
+            <div class="buttom"></div>
         </div>
-
-        <script src="js/script.js"></script>
-        <img src="images/Clownfishai.png" id="center-image">
     </body>
-
 </html>
+
+
