@@ -46,7 +46,6 @@ document.getElementById('upload-form').addEventListener('submit', function(e) {
                 }
             });
         
-            // Now parts is an array of strings, each string is a valid JSON object
             // You can parse each part individually
             var jsonParts = parts.map(part => JSON.parse(part));
         
@@ -140,7 +139,10 @@ uploadForm.addEventListener("submit", async function (e) {
     window.location.href = infoPageURL;
 });
 
-// Function to display a file preview when a file is selected
+// Function preview img & button
+// Function preview img & button
+// Function preview img & button
+
 function previewFile() {
     console.log('previewFile called');  
     var fileInput = document.getElementById('image-upload'); 
