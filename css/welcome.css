@@ -238,3 +238,36 @@ body::before {
         transform: translate3d(-7rem, 0, 0);
     }
 }
+
+/* --------------------- animition --------------------- */
+/* --------------------- animition --------------------- */
+/* --------------------- animition --------------------- */
+.welcome-page .mid {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.welcome-page .spatial-audio {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 3s ease-in forwards, slideIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+    }
+}
+    
