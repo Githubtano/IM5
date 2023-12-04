@@ -11,6 +11,7 @@ class HeaderElement extends HTMLElement {
            <button class="hamburger" id="hamburger">☰</button>
                <nav class="nav" id="nav-menu">
                   <ul class="nav-list">
+                        <li class="nav-item"><a href="/index.html" class="nav-link">Spatial Audio</a></li>
                       <li class="nav-item"><a href="/main.html" class="nav-link">Home</a></li>
                       <li class="nav-item"><a href="/php/species_list.php" class="nav-link">Species List</a></li>
                       <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>

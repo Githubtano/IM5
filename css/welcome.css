@@ -4,7 +4,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #060606;
+    background-color: #0a0a0a;
     overflow-x: hidden; 
     box-sizing: border-box; 
     width: 100vw; 
@@ -25,6 +25,7 @@ html, body {
     width: 100%; 
     user-select: none;
 }
+
 
 /* ----Top Contnent---- */
 /* ----Top Contnent---- */
@@ -54,6 +55,20 @@ html, body {
     letter-spacing: 0;
     line-height: normal;
     top: 50px;
+}
+
+.press-anywhere {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: "open-sans-condensed", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #ffffffa0;
+    font-size: 15px;
+    text-align: right;
+    top: 46px;
+    right: 50px;
 }
 
 /* ----Mid  Contnent---- */
@@ -162,21 +177,21 @@ html, body {
 /* ----Contnent  Bottom---- */
 
 .welcome-page .buttom {
-    position: relative;
-    flex-direction: column;
-    align-self: stretch;
-    align-items: center;
-    justify-content: end;
-    gap: 10px;
-    position: relative;
-    width: 100%;
-    height: 185px;
     display: flex;
-    margin-bottom: 25px;
-    flex: 1;
+    flex-direction: column;
+    width: 1728px;
+    height: 220px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 40px 0px;
+    position: relative;
 }
 
-
+.buttom .head {
+    display: contents;
+    margin-bottom: 50px;
+}
 .headphones {
     position: relative;
     width: fit-content;
@@ -195,7 +210,7 @@ html, body {
     height: 50px;
     object-fit: cover;
 }
-    
+
 
 
 /* -----noise effect-----  */
@@ -271,6 +286,22 @@ body::before {
 /* --------------------- animition --------------------- */
 /* --------------------- animition --------------------- */
 /* --------------------- animition --------------------- */
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.press-anywhere {
+    animation: slideInRight 0.5s ease-in forwards;
+}
+
+
 .welcome-page .mid {
     opacity: 0;
     animation: fadeIn 2s ease-in forwards;
@@ -299,4 +330,62 @@ body::before {
         transform: translateY(0);
     }
 }
-    
+
+.headphones {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 1s ease-in forwards, slideIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+    }
+}
+
+.imgheadphones {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 1s ease-in forwards, slideIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* bubbles */
+/* bubbles */
+/* bubbles */
+
+.bubble {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: bubble 4s linear;
+}
+
+@keyframes bubble {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}

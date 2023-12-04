@@ -1,10 +1,10 @@
-console.log("hello world");
+console.log('Hello Sound')
 
 // Step 1: Create an Audio Context
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
-let source; // Declare source outside the functions so it can be accessed by both
-let panner; // Declare panner outside the functions so it can be accessed by both
+let source; // Declare source outside the functions 
+let panner; // Declare panner outside the functions 
 
 // Step 2: Load your audio file
 function loadAudio(url) {
@@ -96,5 +96,3 @@ welcomePage.addEventListener('mousemove', event => {
     updateSoundPosition(xPos);
 });
 welcomePage.addEventListener('mouseup', stopSound);
-
-
