@@ -2,21 +2,20 @@ console.log('Hello Bubble!')
 
 let isMouseDown = false;
 
-function createBubbles(event) {
-    for (let i = 0; i < 3; i++) { 
-        createBubble(event.clientX, event.clientY);
-    }
-}
-
 function createBubble(x, y) {
     const bubble = document.createElement('div');
     bubble.className = 'bubble';
     bubble.style.left = `${x}px`;
     bubble.style.top = `${y}px`;
+
+    // Generate a random size for each bubble
     const size = Math.random() * 100 + 25; 
     bubble.style.width = `${size}px`;
     bubble.style.height = `${size}px`;
+
+    // Generate a random transition duration for each bubble
     bubble.style.transition = `top ${Math.random() * 1 + 3}s ease-in-out`;
+
     document.body.appendChild(bubble);
 
     setTimeout(() => {
