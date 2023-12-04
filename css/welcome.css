@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Schibsted+Grotesk&display=swap');
+@import url("https://use.typekit.net/hoc1mau.css");
 
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #040404;
+    background-color: #060606;
     overflow-x: hidden; 
     box-sizing: border-box; 
     width: 100vw; 
@@ -162,11 +163,39 @@ html, body {
 
 .welcome-page .buttom {
     position: relative;
+    flex-direction: column;
     align-self: stretch;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    position: relative;
     width: 100%;
     height: 185px;
+    display: flex;
+    margin-bottom: 25px;
     flex: 1;
 }
+
+
+.headphones {
+    position: relative;
+    width: fit-content;
+    font-family: "open-sans-condensed", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #ffffffa0;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.buttom .imgheadphones {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+    
 
 
 /* -----noise effect-----  */

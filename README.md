@@ -8,6 +8,7 @@
 1) KI 
     - ChatGPT 
     - Github Copilot 
+    - Figma 
  
  2) Audio 
     - https://developer.chrome.com/blog/autoplay/#webaudio 
@@ -21,6 +22,7 @@
     - https://stackoverflow.com
     - https://www.freecodecamp.org/news
     - https://codesandbox.io
+    - https://www.figma.com
 
     
 
