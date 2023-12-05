@@ -389,3 +389,22 @@ body::before {
         opacity: 0;
     }
 }
+
+/* ----- add media ----- */ 
+/* ----- add media ----- */ 
+/* ----- add media ----- */ 
+
+@media only screen and (max-width: 1170px) {
+    .recognise-clownfish {
+        font-size: 24px !important; /* Adjust as needed */
+    }
+
+    .ellipse-picture {
+        width: 50%; /* Adjust as needed */
+        height: auto;
+    }
+
+    .button-enter {
+        font-size: 18px; /* Adjust as needed */
+    }
+}
