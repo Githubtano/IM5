@@ -35,6 +35,8 @@ Ein aktuelles Problem ist das Design des neuen Layouts, bei dem nicht sofort ers
     - ChatGPT 
     - Github Copilot 
     - Figma 
+   ### Prompts
+   Während des Projekts stellte ich fest, dass direkte Aufforderungen wie "Schreibe mir den Code" nicht immer effektiv waren. Stattdessen fokussierte ich mich auf spezifische Code-Snippets, etwa "JS-Code für eine Loop-Funktion", und deren Integration in meine Seite. Oft musste ich die gefundenen Codes anpassen, damit sie funktionierten. Bei der Fehlersuche war die KI zu etwa 60% hilfreich, aber in Fällen, in denen sie den Fehler nicht identifizieren konnte, verschlimmerte ihre Vorschläge manchmal den Code.
  
 ## Audio 
     - https://developer.chrome.com/blog/autoplay/#webaudio 
