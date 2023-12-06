@@ -1,38 +1,44 @@
 <?php
-include 'config.php';  // Include the config.php file
+// Load config settings
+include 'config.php';  
 
+// Set response type to JSON
 header('Content-Type: application/json');
+
+// Default message
 echo json_encode(["message" => "Test response"]);
 
-$targetDir = __DIR__ . '/uploads/'; // Target directory on the server
+// Folder for uploads
+$uploadFolder = __DIR__ . '/uploads/'; 
 
-// Create the directory if it does not exist
-if (!file_exists($targetDir)) {
-    mkdir($targetDir, 0777, true);
+// Make folder if not there
+if (!file_exists($uploadFolder)) {
+    mkdir($uploadFolder, 0777, true);
 }
 
-$response = []; // Initialize response array
+// Prepare response
+$response = []; 
 
-// Check if a file is being uploaded
+// Check for uploaded file
 if (isset($_FILES['image']['tmp_name'])) {
     $tempName = $_FILES['image']['tmp_name'];
-    $originalName = $_FILES['image']['name'];
-    $targetFilePath = $targetDir . basename($originalName);
+    $fileName = $_FILES['image']['name'];
+    $filePath = $uploadFolder . basename($fileName);
 
-    // Attempt to move the uploaded file to the target directory
-    if (move_uploaded_file($tempName, $targetFilePath)) {
+    // Move file to upload folder
+    if (move_uploaded_file($tempName, $filePath)) {
         $response = [
-            "message" => "File uploaded successfully",
-            "path" => $targetFilePath,
-            "debug" => $_FILES['image']  // Include debug information (optional)
+            "message" => "File uploaded",
+            "path" => $filePath,
+            "debug" => $_FILES['image'] 
         ];
     } else {
-        $response = ["error" => "Sorry, there was an error uploading your file."];
+        $response = ["error" => "Upload error"];
     }
 } else {
-    $response = ["error" => "No file received"];
+    $response = ["error" => "No file"];
 }
 
-// Output the single JSON-encoded string
+// Send response
 echo json_encode($response);
 ?>

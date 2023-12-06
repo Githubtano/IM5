@@ -1,12 +1,20 @@
 <?php
 
+<?php
+// Include the configuration file for database settings
 include 'config.php';
 
 try {
+    // Execute a query to select all records from the clownfish_species table
     $stmt = $db->query("SELECT * FROM clownfish_species");
+
+    // Fetch all the records as an associative array
     $species_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Count the number of species retrieved
     $species_count = count($species_list);
 } catch (PDOException $e) {
+    // If an error occurs, display the error message and stop the script
     echo "Error: " . $e->getMessage();
     exit;
 }

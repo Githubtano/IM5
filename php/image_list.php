@@ -1,6 +1,7 @@
 <?php
-include 'config.php';  // Ensure this path is correct
-
+// Ensure this path is correct
+include 'config.php';  
+// Use an absolute path
 $directory = __DIR__ . '/uploads/';  // Use an absolute path
 
 $images = array_merge(
