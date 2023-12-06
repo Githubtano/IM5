@@ -1,12 +1,12 @@
 console.log('Hello Sound')
 
-// Step 1: Create an Audio Context
+//Create an Audio Context
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
 let source; // Declare source outside the functions 
 let panner; // Declare panner outside the functions 
 
-// Step 2: Load your audio file
+// Load your audio file
 function loadAudio(url) {
     return fetch(url)
         .then(response => response.arrayBuffer())
