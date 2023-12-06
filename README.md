@@ -29,58 +29,22 @@ Das Projekt hat mir gezeigt, wie wichtig es ist, das Design frühzeitig und durc
 
 Ein aktuelles Problem ist das Design des neuen Layouts, bei dem nicht sofort ersichtlich ist, dass eine Interaktion mit der Maus möglich ist. Dies macht den Bubble-Effekt weniger sichtbar und kann verwirrend sein. Ich habe erkannt, dass CSS komplexer ist, als ich zunächst annahm, insbesondere beim effektiven Layouten eines Designs.
 
-*Wireframe
-## Inhaltsverzeichnis
-1. [Startseite (Index)](#startseite-index)
-2. [Hauptseite (Main)](#hauptseite-main)
-3. [Artenliste (Species List)](#artenliste-species-list)
-4. [Galerie (Gallery)](#galerie-gallery)
+# Quellen  & code snippets 
 
-## Startseite (Index)
-### Willkommen bei Clownfish Recognition
-- **Feature:** Spatial Audio-Effekt auf der Startseite für ein immersives Erlebnis.
-- **Navigation:**
-  - [Clownfish erkennen](#hauptseite-main)
-
-## Hauptseite (Main)
-### Clownfish-Erkennung
-- **Anleitung:** Wie Nutzer ein Bild für die Erkennung hochladen können.
-- **Funktionalität:**
-  - Option zum Hochladen eines Bildes.
-- **Ergebnisanzeige:**
-  - Identifikation der Art (Ocellaris oder Melanopus) mit zusätzlichen Informationen.
-
-## Artenliste (Species List)
-### Clownfish-Artenliste
-- **Beschreibung:** Liste aller Arten von Clownfischen aus der Datenbank.
-- **Inhalte pro Art:**
-  - Name
-  - Kurze Beschreibung
-  - Bild
-
-## About
-### Clownfish-Galerie
-- **Überblick:**  Bildern aus der Datenbank.
-
-
-
-
-# Sources  & code snippets 
-
-1) KI 
+## KI 
     - ChatGPT 
     - Github Copilot 
     - Figma 
  
- 2) Audio 
+## Audio 
     - https://developer.chrome.com/blog/autoplay/#webaudio 
     - https://howlerjs.com/
 
- 3) Machine Learning
+## Machine Learning
     - https://experiments.withgoogle.com/
     - https://teachablemachine.withgoogle.com/
 
-4) Code Snippets & Help 
+## Code Snippets & Help 
     - https://stackoverflow.com
     - https://www.freecodecamp.org/news
     - https://codesandbox.io
