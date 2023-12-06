@@ -12,7 +12,7 @@ fetch('/php/image_list.php')  // Update with the correct path to the PHP script
     .catch(error => console.error('Error fetching images:', error));
 
     // Set up an interval to continuously add new images
-    setInterval(populateGallery, 55000); // Adjust the time as needed
+    setInterval(populateGallery, 55000); 
 });
 
 // Function to populate the gallery with a set of random images

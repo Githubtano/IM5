@@ -1,6 +1,5 @@
 <?php
 
-<?php
 // Include the configuration file for database settings
 include 'config.php';
 
